@@ -156,6 +156,42 @@ SELECT * FROM users_by_title WHERE title='leader';
  leader |      billy |      what
 ```
 
+## Stress test
+
+```bash
+tools/bin/cassandra-stress write n=10000000
+
+Results:
+Op rate                   :   15.571 op/s  [WRITE: 15.571 op/s]
+Partition rate            :   15.571 pk/s  [WRITE: 15.571 pk/s]
+Row rate                  :   15.571 row/s [WRITE: 15.571 row/s]
+Latency mean              :   12,8 ms [WRITE: 12,8 ms]
+Latency median            :    3,6 ms [WRITE: 3,6 ms]
+Latency 95th percentile   :   42,1 ms [WRITE: 42,1 ms]
+Latency 99th percentile   :  237,9 ms [WRITE: 237,9 ms]
+Latency 99.9th percentile :  405,5 ms [WRITE: 405,5 ms]
+Latency max               : 13967,0 ms [WRITE: 13.967,0 ms]
+Total partitions          : 10.000.000 [WRITE: 10.000.000]
+Total errors              :          0 [WRITE: 0]
+Total GC count            : 366
+Total GC memory           : 103,853 GiB
+Total GC time             :   34,0 seconds
+Avg GC time               :   92,8 ms
+StdDev GC time            :   49,7 ms
+Total operation time      : 00:10:42
+```
+
+```bash
+bin/nodetool status
+
+Datacenter: datacenter1
+=======================
+Status=Up/Down
+|/ State=Normal/Leaving/Joining/Moving
+--  Address    Load        Tokens  Owns  Host ID                               Rack 
+UN  127.0.0.1  791,64 MiB  16      ?     c49d5547-c308-4138-bbfd-17cbe6da6302  rack1
+```
+
 ## References
 
 * https://github.com/apache/cassandra#getting-started
