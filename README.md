@@ -7,8 +7,8 @@
 * The design of the `primary key` is extremely important, as it will determine how much data will be stored in each partition and how that data is organized on disk, which in turn will affect how quickly Cassandra processes read queries.
 
 <p float="left">
-    <img src="pix/cluster_topology.png" height="300" />
-    <img src="pix/partitioner.png" height="300" />
+    <img src="pix/cluster_topology.png" height="200" />
+    <img src="pix/partitioner.png" height="200" />
 </p>
 
 * A `higher consistency level` means that `more nodes` need to respond to a read or write query, giving you more assurance that the values present on each replica are the same.
@@ -17,7 +17,7 @@
 * Streaming is Cassandra’s optimized way of sending `SSTable` files from one node to another via a `persistent TCP connection`.
 
 <p float="left">
-    <img src="pix/client_coordinator_replica.png" width="600" />
+    <img src="pix/client_coordinator_replica.png" height="200" />
 </p>
 
 * Cassandra provides two mechanisms that you can use as alternatives to managing multiple denormalized tables: `secondary indexes` and `materialized views`.
@@ -31,19 +31,23 @@
 * A variant of the `event-based choreography` approach is to leverage the `change data capture (CDC)` feature of a database as the source of events, rather than relying on a service to reliably persist data to a database and then post an event.
 
 <p float="left">
-    <img src="pix/service_integration_patterns.png" width="600" />
+    <img src="pix/service_integration_patterns.png" height="200" />
 </p>
 
 ## Example
 
 Q1. Find hotels near a given point of interest.
+
 Q2. Find information about a given hotel, such as its name and location.
+
 Q3. Find points of interest near a given hotel.
+
 Q4. Find an available room in a given date range.
+
 Q5. Find the rate and amenities for a room.
 
 <p float="left">
-    <img src="pix/hotel_domain_logical_model.png" width="600" />
+    <img src="pix/hotel_domain_logical_model.png" height="200" />
 </p>
 
 ```sql
@@ -71,12 +75,15 @@ AND CLUSTERING ORDER BY (hotel_id ASC);
 ```
 
 Q6. Look up a reservation by confirmation number.
+
 Q7. Look up a reservation by hotel, date, and guest name.
+
 Q8. Look up all reservations by guest name.
+
 Q9. View guest details.
 
 <p float="left">
-    <img src="pix/reservation_logical_model.png" width="600" />
+    <img src="pix/reservation_logical_model.png" height="200" />
 </p>
 
 ## CQL
