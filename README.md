@@ -8,7 +8,7 @@
 
 <p float="left">
     <img src="pix/partitioner.png" width="500" />
-    <img src="pix/cluster_topology.png" width="300" />
+    <img src="pix/cluster_topology.png" width="330" />
 </p>
 
 * A `higher consistency level` means that `more nodes` need to respond to a read or write query, giving you more assurance that the values present on each replica are the same.
