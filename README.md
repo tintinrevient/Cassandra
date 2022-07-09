@@ -7,7 +7,7 @@
 * The design of the `primary key` is extremely important, as it will determine how much data will be stored in each partition and how that data is organized on disk, which in turn will affect how quickly Cassandra processes read queries.
 
 <p float="left">
-    <img src="pix/partitioner.png" width="300" />
+    <img src="pix/partitioner.png" width="350" />
     <img src="pix/cluster_topology.png" width="350" />
 </p>
 
