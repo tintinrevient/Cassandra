@@ -83,7 +83,7 @@ Q8. Look up all reservations by guest name.
 Q9. View guest details.
 
 <p float="left">
-    <img src="pix/reservation_logical_model.png" width="500" />
+    <img src="pix/reservation_logical_model.png" width="550" />
 </p>
 
 ## CQL
