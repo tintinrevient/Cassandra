@@ -17,7 +17,7 @@
 * Streaming is Cassandra’s optimized way of sending `SSTable` files from one node to another via a `persistent TCP connection`.
 
 <p float="left">
-    <img src="pix/client_coordinator_replica.png" height="200" />
+    <img src="pix/client_coordinator_replica.png" width="550" />
 </p>
 
 * Cassandra provides two mechanisms that you can use as alternatives to managing multiple denormalized tables: `secondary indexes` and `materialized views`.
@@ -31,7 +31,7 @@
 * A variant of the `event-based choreography` approach is to leverage the `change data capture (CDC)` feature of a database as the source of events, rather than relying on a service to reliably persist data to a database and then post an event.
 
 <p float="left">
-    <img src="pix/service_integration_patterns.png" height="200" />
+    <img src="pix/service_integration_patterns.png" width="550" />
 </p>
 
 ## Example
@@ -47,7 +47,7 @@ Q4. Find an available room in a given date range.
 Q5. Find the rate and amenities for a room.
 
 <p float="left">
-    <img src="pix/hotel_domain_logical_model.png" height="200" />
+    <img src="pix/hotel_domain_logical_model.png" width="500" />
 </p>
 
 ```sql
@@ -83,7 +83,7 @@ Q8. Look up all reservations by guest name.
 Q9. View guest details.
 
 <p float="left">
-    <img src="pix/reservation_logical_model.png" height="200" />
+    <img src="pix/reservation_logical_model.png" width="500" />
 </p>
 
 ## CQL
