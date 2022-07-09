@@ -7,8 +7,8 @@
 * The design of the `primary key` is extremely important, as it will determine how much data will be stored in each partition and how that data is organized on disk, which in turn will affect how quickly Cassandra processes read queries.
 
 <p float="left">
-    <img src="pix/cluster_topology.png" height="200" />
-    <img src="pix/partitioner.png" height="200" />
+    <img src="pix/cluster_topology.png" height="250" />
+    <img src="pix/partitioner.png" height="250" />
 </p>
 
 * A `higher consistency level` means that `more nodes` need to respond to a read or write query, giving you more assurance that the values present on each replica are the same.
