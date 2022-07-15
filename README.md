@@ -194,6 +194,7 @@ UN  127.0.0.1  791,64 MiB  16      ?     c49d5547-c308-4138-bbfd-17cbe6da6302  r
 
 ## References
 
+* https://github.com/tintinrevient/cassandra-reservation-service
 * https://github.com/apache/cassandra#getting-started
 * https://db-engines.com/en/ranking
 * https://db-engines.com/en/ranking/wide+column+store
